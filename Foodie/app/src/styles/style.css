@@ -1,0 +1,142 @@
+/* Style dla głównej strony przepisów */
+.recipe-list-container {
+  background: linear-gradient(90deg, rgb(255, 54, 111) 0%, rgb(239, 111, 199) 35%, rgb(67, 215, 215) 100%); /* Gradient tła */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Tytuł strony */
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white; /* Kolor tekstu na biały */
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtelny cień dla tytułu */
+  padding: 10px 0;
+}
+
+/* Pasek wyszukiwania */
+.search-bar {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.search-input {
+  border-radius: 50px;
+  padding-left: 20px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: rgb(255, 54, 111); /* Zmiana na różowy przy focussie */
+  outline: none;
+}
+
+/* Karty przepisów */
+.recipe-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Przyciski w kartach */
+.recipe-card button {
+  background-color: rgb(239, 111, 199); /* Użycie delikatnego różowego na przyciskach */
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.recipe-card button:hover {
+  background-color: rgb(255, 54, 111); /* Przechodzi na jaskrawy różowy przy najechaniu */
+}
+
+/* Wyrównanie elementów w kolumnach */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Grupowanie przycisków */
+.button-group {
+  display: flex;
+  flex-wrap: wrap; /* Przyciski mogą przechodzić do nowej linii, jeśli nie mieszczą się na szerokości */
+  gap: 15px; /* Odstępy między przyciskami */
+  justify-content: center; /* Przyciski wyrównane do centrum */
+  margin-bottom: 15px; /* Dodanie marginesu na dole */
+}
+
+/* Styl dla wszystkich przycisków */
+.btn-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px; /* Odpowiednie przestrzenie wewnętrzne */
+  font-size: 1rem; /* Ustalona wielkość czcionki */
+  border: none;
+  border-radius: 30px; /* Zaokrąglone rogi przycisków */
+  min-width: 140px; /* Minimalna szerokość */
+  max-width: 220px; /* Maksymalna szerokość */
+  text-align: center;
+  transition: all 0.3s ease; /* Animacja przy najechaniu */
+}
+
+.btn-action:hover {
+  transform: translateY(-5px); /* Przyjemny efekt unoszenia przy najechaniu */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Dodanie cienia przy najechaniu */
+}
+
+/* Wyrównanie przycisku "Szczegóły" */
+.button-details-container {
+  display: flex;
+  justify-content: center; /* Wyrównanie przycisku na środku */
+  margin-top: 15px;
+}
+
+/* Dodatkowe stylizacje dla kolorów przycisków */
+.btn-danger {
+  background-color: rgb(255, 54, 111); /* Jaskrawy różowy */
+  color: white;
+}
+
+.btn-outline-danger {
+  background-color: transparent;
+  color: rgb(255, 54, 111);
+  border: 2px solid rgb(255, 54, 111);
+}
+
+.btn-warning {
+  background-color: rgb(239, 111, 199); /* Delikatny różowy */
+}
+
+.btn-primary {
+  background-color: rgb(67, 215, 215); /* Turkusowy */
+}
+
+.btn-add:hover{
+  background-color: rgb(239, 111, 199);
+}

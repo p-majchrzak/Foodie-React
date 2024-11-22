@@ -1,0 +1,1 @@
+The application was created as a school project. It was developed using technologies such as React, HTML, JS, JSX, Bootstrap, and CSS. The goal of the application was to create a recipe creator app.
