@@ -14,15 +14,15 @@ function RecipeCard({ recipe, onDelete, onFavorite, isFavoritePage }) {
           <strong>Czas przygotowania:</strong> {recipe.time} min
         </p>
 
-        {/* Przyciski usuwania i edytowania dostępne tylko na stronie RecipeList */}
+
         {!isFavoritePage && (
           <div className="button-group" style={{ display: 'flex', gap: '8px' }}>
             <button
               className="btn btn-action"
               style={{
-                backgroundColor: 'rgb(255, 54, 111)', // Jaskrawy różowy
+                backgroundColor: 'rgb(255, 54, 111)', 
                 color: 'white',
-                borderRadius: '12px', // Zaokrąglone rogi
+                borderRadius: '12px',
                 padding: '8px 16px',
                 border: 'none'
               }}
@@ -35,9 +35,9 @@ function RecipeCard({ recipe, onDelete, onFavorite, isFavoritePage }) {
               to={`/edit/${recipe.id}`}
               className="btn btn-action"
               style={{
-                backgroundColor: 'rgb(239, 111, 199)', // Delikatny różowy
+                backgroundColor: 'rgb(239, 111, 199)',
                 color: 'white',
-                borderRadius: '12px', // Zaokrąglone rogi
+                borderRadius: '12px', 
                 padding: '8px 16px',
                 textDecoration: 'none'
               }}
@@ -45,16 +45,15 @@ function RecipeCard({ recipe, onDelete, onFavorite, isFavoritePage }) {
               <FaEdit /> Edytuj
             </Link>
 
-            {/* Przycisk do dodawania lub usuwania z ulubionych */}
             <button
               className={`btn ${recipe.favorite ? 'btn-danger' : 'btn-outline-danger'}`}
               onClick={() => onFavorite(recipe.id)}
               style={{
-                color: recipe.favorite ? 'white' : 'rgb(255, 54, 111)', // Czerwony tekst, jeśli nie jest ulubiony
-                backgroundColor: recipe.favorite ? 'rgb(255, 54, 111)' : 'white', // Różowe tło, jeśli ulubiony
+                color: recipe.favorite ? 'white' : 'rgb(255, 54, 111)', 
+                backgroundColor: recipe.favorite ? 'rgb(255, 54, 111)' : 'white', 
                 borderRadius: '12px', // Zaokrąglone rogi
                 padding: '8px 16px',
-                border: recipe.favorite ? 'none' : '2px solid rgb(255, 54, 111)', // Czerwona ramka, jeśli nie ulubiony
+                border: recipe.favorite ? 'none' : '2px solid rgb(255, 54, 111)', 
               }}
             >
               <FaHeart /> {recipe.favorite ? 'Usuń z ulubionych' : 'Dodaj do ulubionych'}
@@ -62,15 +61,15 @@ function RecipeCard({ recipe, onDelete, onFavorite, isFavoritePage }) {
           </div>
         )}
 
-        {/* Przyciski dostępne tylko na stronie FavoriteRecipes */}
+
         {isFavoritePage && (
           <div className="button-group" style={{ display: 'flex', gap: '8px' }}>
             <button
               className="btn btn-action btn-danger"
               style={{
-                backgroundColor: 'rgb(255, 54, 111)', // Jaskrawy różowy
+                backgroundColor: 'rgb(255, 54, 111)', 
                 color: 'white',
-                borderRadius: '12px', // Zaokrąglone rogi
+                borderRadius: '12px',
                 padding: '8px 16px',
                 border: 'none'
               }}
@@ -81,15 +80,14 @@ function RecipeCard({ recipe, onDelete, onFavorite, isFavoritePage }) {
           </div>
         )}
 
-        {/* Link do szczegółów przepisu */}
         <div className="button-details-container" style={{ marginTop: '15px' }}>
           <Link
             to={`/recipe/${recipe.id}`}
             className="btn btn-action"
             style={{
-              backgroundColor: 'rgb(67, 215, 215)', // Turkusowy
+              backgroundColor: 'rgb(67, 215, 215)', 
               color: 'white',
-              borderRadius: '12px', // Zaokrąglone rogi
+              borderRadius: '12px', 
               padding: '8px 16px',
               textDecoration: 'none'
             }}
