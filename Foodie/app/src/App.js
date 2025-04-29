@@ -4,7 +4,7 @@ import RecipeList from './pages/RecipeList';
 import AddRecipe from './pages/AddRecipe';
 import FavoriteRecipes from './pages/FavoriteRecipes';
 import Inspiration from './pages/Inspiration';
-import RecipeDetail from './pages/RecipeDetail'; // Importuj RecipeDetail
+import RecipeDetail from './pages/RecipeDetail'; 
 import EditRecipe from './pages/EditRecipe';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -19,7 +19,7 @@ function App() {
             <Route path="/add" element={<AddRecipe />} />
             <Route path="/favorites" element={<FavoriteRecipes />} />
             <Route path="/inspiration" element={<Inspiration />} />
-            <Route path="/recipe/:id" element={<RecipeDetail />} /> {/* Trasa do szczegółów przepisu */}
+            <Route path="/recipe/:id" element={<RecipeDetail />} /> 
             <Route path="/edit/:id" element={<EditRecipe />} />
           </Routes>
         </div>
