@@ -26,7 +26,7 @@ function Inspiration() {
         background: 'linear-gradient(90deg, rgb(255, 54, 111) 0%, rgb(239, 111, 199) 35%, rgb(67, 215, 215) 100%)',
         padding: '20px',
         borderRadius: '12px',
-        color: 'white', // Biały tekst na tle gradientu
+        color: 'white',
       }}
     >
       <h1 className="text-center mb-4">Generator Inspiracji</h1>
@@ -34,18 +34,18 @@ function Inspiration() {
       <div className="mb-3">
         <strong>Składniki:</strong> {availableIngredients.join(', ')}
       </div>
-      {/* Zmieniony kolor przycisku na biały */}
+
       <button
         className="btn"
         style={{
-          backgroundColor: 'white', // Kolor przycisku na biały
-          color: 'rgb(239, 111, 199)', // Kolor tekstu dopasowany do tła przycisku
-          border: 'none', // Usuwamy obramowanie
-          borderRadius: '25px', // Zaokrąglone rogi
-          padding: '10px 20px', // Padding przycisku
-          cursor: 'pointer', // Kursor zmienia się na wskazujący
-          fontSize: '1rem', // Rozmiar czcionki
-          transition: 'background-color 0.3s ease', // Płynna zmiana koloru przy najechaniu
+          backgroundColor: 'white', 
+          color: 'rgb(239, 111, 199)', 
+          border: 'none', 
+          borderRadius: '25px', 
+          padding: '10px 20px', 
+          cursor: 'pointer', 
+          fontSize: '1rem', 
+          transition: 'background-color 0.3s ease', 
         }}
         onClick={handleGenerateInspiration}
       >
