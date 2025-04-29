@@ -4,7 +4,7 @@ import '../styles/style.css';
 
 function RecipeList() {
   const [recipes, setRecipes] = useState([]);
-  const [filter, setFilter] = useState(''); // Przechowuje wartość filtra
+  const [filter, setFilter] = useState(''); 
 
   useEffect(() => {
     const storedRecipes = JSON.parse(localStorage.getItem('recipes')) || [];
@@ -29,12 +29,11 @@ function RecipeList() {
     <div 
       className="recipe-list-container"
       style={{
-        marginBottom: '30px', // Dodajemy odstęp dolny
+        marginBottom: '30px', 
       }}
     >
       <h1 className="text-center mb-4 title">Lista Przepisów</h1>
 
-      {/* Pasek wyszukiwania */}
       <div className="input-group mb-3 search-bar">
         <input
           type="text"
@@ -48,7 +47,7 @@ function RecipeList() {
       <div className="row">
         {recipes
           .filter((recipe) =>
-            recipe.title.toLowerCase().includes(filter.toLowerCase()) // Filtrowanie po tytule
+            recipe.title.toLowerCase().includes(filter.toLowerCase()) 
           )
           .map((recipe) => (
             <div className="col-md-4 mb-3" key={recipe.id}>
@@ -56,7 +55,7 @@ function RecipeList() {
                 recipe={recipe}
                 onDelete={handleDelete}
                 onFavorite={handleFavorite}
-                isFavoritePage={false} // Na tej stronie mamy wszystkie funkcje
+                isFavoritePage={false} 
               />
             </div>
           ))}
