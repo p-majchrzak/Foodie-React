@@ -14,10 +14,10 @@ function Navbar() {
           className="navbar-brand" 
           to="/" 
           style={{
-            fontFamily: 'Poppins, sans-serif', // Zastosowanie czcionki Poppins
-            fontWeight: '700', // Pogrubienie tekstu
-            fontSize: '2rem', // Zwiększenie rozmiaru tekstu
-            letterSpacing: '1px', // Rozszerzenie liter
+            fontFamily: 'Poppins, sans-serif', 
+            fontWeight: '700',
+            fontSize: '2rem',
+            letterSpacing: '1px', 
           }}
         >
           FOODIE
