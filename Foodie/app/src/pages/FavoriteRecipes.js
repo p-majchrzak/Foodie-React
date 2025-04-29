@@ -6,7 +6,7 @@ function FavoriteRecipes() {
 
   useEffect(() => {
     const storedRecipes = JSON.parse(localStorage.getItem('recipes')) || [];
-    const favoriteRecipes = storedRecipes.filter((recipe) => recipe.favorite); // Przepisy, które są ulubione
+    const favoriteRecipes = storedRecipes.filter((recipe) => recipe.favorite); 
     setFavorites(favoriteRecipes);
   }, []);
 
@@ -29,7 +29,7 @@ function FavoriteRecipes() {
         background: 'linear-gradient(90deg, rgb(255, 54, 111) 0%, rgb(239, 111, 199) 35%, rgb(67, 215, 215) 100%)',
         padding: '20px',
         borderRadius: '12px',
-        color: 'white', // Biały tekst na tle gradientu
+        color: 'white', 
       }}
     >
       <h1 className="text-center mb-4">Ulubione Przepisy</h1>
@@ -39,8 +39,8 @@ function FavoriteRecipes() {
             <div className="col-md-4 mb-3" key={recipe.id}>
               <RecipeCard
                 recipe={recipe}
-                onDelete={handleRemoveFavorite} // Usuń z ulubionych
-                isFavoritePage={true} // Na tej stronie tylko opcja usuwania z ulubionych
+                onDelete={handleRemoveFavorite} 
+                isFavoritePage={true} 
               />
             </div>
           ))
