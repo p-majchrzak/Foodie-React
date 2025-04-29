@@ -18,7 +18,6 @@ function IngredientInput({ ingredients, setIngredients }) {
   return (
     <div>
       <div className="input-group mb-3">
-        {/* Zaokrąglony input z zachowanym oryginalnym kolorem obramowania i placeholdera */}
         <input
           type="text"
           className="form-control"
@@ -26,21 +25,21 @@ function IngredientInput({ ingredients, setIngredients }) {
           value={ingredient}
           onChange={(e) => setIngredient(e.target.value)}
           style={{
-            borderRadius: '25px', // Zaokrąglenie inputa
-            padding: '10px', // Padding wewnętrzny
-            border: '1px solid #ced4da', // Oryginalny kolor obramowania
+            borderRadius: '25px', 
+            padding: '10px',
+            border: '1px solid #ced4da', 
             fontSize: '1rem',
-            marginRight: '2px', // Odstęp 2px między inputem a przyciskiem
+            marginRight: '2px',
           }}
         />
-        {/* Zmieniony kolor przycisku na rgb(239, 111, 199) */}
+
         <button
           className="btn"
           style={{
-            backgroundColor: 'white', // Kolor tła przycisku
-            color: 'rgb(67, 215, 215)', // Kolor tekstu
+            backgroundColor: 'white', 
+            color: 'rgb(67, 215, 215)', 
             border: 'none',
-            borderRadius: '25px', // Zaokrąglony przycisk
+            borderRadius: '25px', 
             padding: '10px 20px',
             cursor: 'pointer',
             fontSize: '1rem',
