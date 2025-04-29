@@ -28,14 +28,14 @@ function AddRecipe() {
       background: 'linear-gradient(90deg, rgb(255, 54, 111) 0%, rgb(239, 111, 199) 35%, rgb(67, 215, 215) 100%)',
       padding: '20px',
       borderRadius: '12px',
-      color: 'white',  // Wszystkie teksty będą białe
+      color: 'white',  
     }}>
       <div className="add-recipe-header">
         <h1>Dodaj Nowy Przepis</h1>
       </div>
       <form onSubmit={handleSubmit} className="recipe-form" style={{
-        backgroundColor: 'white',  // Formularz ma białe tło
-        color: 'black',            // Tekst wewnątrz formularza czarny
+        backgroundColor: 'white',  
+        color: 'black',           
         padding: '20px',
         borderRadius: '12px',
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
@@ -86,7 +86,7 @@ function AddRecipe() {
           type="submit"
           className="btn btn-action"
           style={{
-            backgroundColor: 'rgb(255, 54, 111)', // Jaskrawy różowy
+            backgroundColor: 'rgb(255, 54, 111)', 
             color: 'white',
             borderRadius: '8px',
             padding: '8px 16px',
